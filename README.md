@@ -48,7 +48,7 @@
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Event-Bliss/
