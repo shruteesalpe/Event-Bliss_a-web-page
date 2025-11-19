@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Bliss Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('job.jpeg');
+            background-size: cover;
+            padding: 20px;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: rgb(76, 175, 80);
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(69, 160, 73);
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Event Bliss Job Application Form</h1></center>
+    <form action="#" method="post">
+        <label>Full Name:</label>
+        <input type="text" name="fullname" required>
+        
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        
+        <label>Phone:</label>
+        <input type="text" name="phone">
+        
+        <label>Position Applying For:</label>
+        <select name="position" required>
+            <option value="">Select Position</option>
+            <option value="Event Coordinator">Event Coordinator</option>
+            <option value="Event Planner">Event Planner</option>
+            <option value="Marketing Manager">Marketing Manager</option>
+            <option value="Catering Manager">Catering Manager</option>
+            <option value="Technical Support">Technical Support</option>
+        </select>
+        
+        <label>Years of Experience:</label>
+        <input type="text" name="experience">
+        
+        <label>Why do you want to work for Event Bliss?</label>
+        <textarea name="message" rows="4" required></textarea>
+        
+        <input type="submit" value="Submit Application">
+    </form>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+<head>
+    <script src="angular.js"></script>
+    <style>
+        .div1 {
+            background-color:antiquewhite; 
+            background-size: cover;
+        }
+        .div1 a{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .div2 {
+            background-image: url('event.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 50%;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 30px; /* Adjust as needed */
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: none;
+        }
+
+        .dropdown ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown li {
+            margin-bottom: 5px;
+        }
+
+        .dropdown a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+    </style>
+    <title>Event Bliss - Home</title>
+</head>
+
+<body>
+    <marquee>Hi, Welcome to Event Bliss! We here create unforgettable experiences with our comprehensive event management services. 
+        From intimate birthday parties to grand weddings, we bring your vision to life.</marquee>
+
+    <div class="div1">
+      <center><br><a href="about us.html">About Us</a>
+        <div class="container" ng-init="showDropdown = false">
+            <span ng-mouseover="showDropdown = true" ng-mouseleave="showDropdown = false">Events</span>
+            <div class="dropdown" ng-show="showDropdown">
+                <ul>
+                    <li><a href="birthdays.html">Birthdays</a></li>
+                    <li><a href="weddings.html">Weddings</a></li>
+                    <li><a href="corporate events.html">Corporate Events</a></li>
+                    <li><a href="parties.html">Parties</a></li>
+                    <li><a href="other events.html">Customized Event Celebrations</a></li>
+                </ul>
+            </div>
+        </div>
+        <a href="gallery.html">Gallery</a><a href="contact us.html">Contact Us</a><br><br></center>
+    </div>
+
+    <header>
+       <div class="div2" >
+            <br><br><br><br><br><h1 style="text-align: center; color:bisque;">Event Bliss</h1>
+            <h3 style="text-align: center; color:rgb(62, 89, 16) ;">Your One-Stop Event Management Solution</h3><br><br><br><br><br><br>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Event Bliss is your premier event management company, dedicated to creating memorable experiences for every occasion. 
+                Whether it's a birthday, wedding, corporate event, or any other celebration, we handle all aspects of event planning 
+                and coordination with meticulous attention to detail. Our team of experienced professionals works tirelessly to ensure
+                 that your event exceeds expectations and leaves a lasting impression on you and your guests.</p>
+        </section>
+        <section id="events">
+            <h2>Events We Organize</h2>
+            <ul>
+                <li>Birthday Parties</li>
+                <li>Weddings</li>
+                <li>Corporate Events</li>
+                <li>Parties</li>
+                <li>Customized Event Celebrations</li>
+            </ul>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <img src="birthday.jpg" alt="Birthday Image" width="500">
+            <img src="weddings.jpg" alt="Wedding Image" width="500">
+            <img src="corporate event.jpeg" alt="Corporate Event Image" width="500">
+            <img src="parties.jpg" alt="Party Image" width="500">
+            <img src="image.jpeg" alt="Other Image" width="500">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Event Bliss. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+

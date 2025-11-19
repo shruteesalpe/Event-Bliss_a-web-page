@@ -1,0 +1,194 @@
+
+<html>
+<head>
+    <title>Event Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:darksalmon; 
+        }
+        header {
+            background-color:darkgrey;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .gallery-section {
+            margin-bottom: 40px;
+        }
+        .gallery-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+        }
+        .gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 10px;
+            scroll-snap-align: start;
+        }
+        .slide-control {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .slide-button {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #555;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            margin: 50px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: larger;
+        }
+        button:hover {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i>Event Gallery</h1></i>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    
+    <div class="container">
+        <div class="gallery-section">
+            <h2>Birthday Parties</h2>
+            <div class="gallery" id="birthday-gallery">
+                <img src="birthday1.jpg" alt="Birthday Party 1">
+                <img src="birthday2.jpg" alt="Birthday Party 2">
+                <img src="birthday4.jpg" alt="Birthday Party 3">
+                <img src="birthday5.jpg" alt="Birthday Party 3">
+                <img src="birthday6.jpg" alt="Birthday Party 3">
+                
+                <!-- Add more images for birthday parties -->
+            </div>
+            <div class="slide-control" id="birthday-control"></div>
+        </div>
+        
+        <div class="gallery-section">
+            <h2>Weddings</h2>
+            <div class="gallery" id="wedding-gallery">
+                <img src="wedding1.jpg" alt="Wedding 1">
+                <img src="wedding2.jpg" alt="Wedding 2">
+                <img src="wedding3.jpg" alt="Wedding 3">
+                <img src="wedding11.jpg" alt="Wedding 11">
+                <img src="wedding10.jpg" alt="Wedding 10">
+            </div>
+            <div class="slide-control" id="wedding-control"></div>
+        </div>
+        
+        <div class="gallery-section">
+            <h2>Corporate Events</h2>
+            <div class="gallery" id="corporate-gallery">
+                <img src="corporate1.jpg" alt="Corporate Event 1">
+                <img src="corporate2.jpg" alt="Corporate Event 2">
+                <img src="corporate3.jpg" alt="Corporate Event 3">
+                <img src="corporate4.avif" alt="Corporate Event 4">
+                <img src="corporate5.avif" alt="Corporate Event 5">
+                <img src="corporate6.avif" alt="Corporate Event 6">
+            </div>
+            <div class="slide-control" id="corporate-control"></div>
+        </div>
+        <div class="gallery-section">
+            <h3>Customized Events</h3>
+            <div class="gallery" id="events-gallery">
+                <img src="other1.jpg" alt="other event1">
+                <img src="other2.jpg" alt="other event1">
+                <img src="other3.jpg" alt="other event1">
+                <img src="other4.jpg" alt="other event1">
+                <img src="other5.jpg" alt="other event1">
+
+            </div>
+            <div class="slide-control" id="event-control"></div>
+        </div>
+        <div class="gallery-section">
+            <h3>Custom Parties</h3>
+            <div class="gallery" id="parties-gallery">
+                <img src="party1.jpeg" alt="other event1">
+                <img src="Partyparty.jpg" alt="other event1">
+                <img src="Party2.jpeg" alt="other event1">
+                <img src="party_3.jpeg" alt="other event1">
+                <img src="Party4.jpeg" alt="other event1">
+
+            </div>
+            <div class="slide-control" id="party-control"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Event Bliss. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function createSlideButtons(galleryId, controlId) {
+            const gallery = document.getElementById(galleryId);
+            const images = gallery.querySelectorAll('img');
+            const control = document.getElementById(controlId);
+
+            images.forEach((image, index) => {
+                const button = document.createElement('div');
+                button.classList.add('slide-button');
+                button.addEventListener('click', () => {
+                    image.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+                });
+                control.appendChild(button);
+            });
+        }
+
+        createSlideButtons('birthday-gallery', 'birthday-control');
+        createSlideButtons('wedding-gallery', 'wedding-control');
+        createSlideButtons('corporate-gallery', 'corporate-control');
+        createSlideButtons('events-gallery', 'events-control');
+        createSlideButtons('parties-gallery', 'party-control');
+    </script>
+     <center><a href="contact.html"><button type="button">Contact Us</button></a></center>
+</body>
+</html>

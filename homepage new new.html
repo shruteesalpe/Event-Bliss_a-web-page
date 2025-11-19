@@ -1,0 +1,274 @@
+
+<html ng-app="">
+<head>
+    <title>Event Bliss - Home</title>
+    <script src="angular.js"></script>
+    <style>
+        .div1 {
+            background-color: antiquewhite;
+            background-size: cover;
+        }
+        .div1 a {
+            margin-left: 50px;
+            margin-right: 50px;
+            text-decoration: none;
+        }
+        .div2 {
+            margin-top: 10px;
+            background-image: url('event.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+        }
+        .div2 h3{
+            color:rgb(62, 89, 16) ;
+            text-align: center;
+        }
+        .banner {
+            position: relative;
+            display: inline-block;
+            max-width: 600px;
+        }
+        .backdrop {
+            margin-top: 10px;
+            background-image: url(back5.jpg); 
+            background-size: cover; 
+            background-position: center; 
+            font-size: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .content {
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .content h2 {
+            color: rgb(51, 51, 51);
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+        .content p {
+            color: rgb(102, 102, 102);
+            line-height: 1.6;
+            margin-left: 20px;
+        }
+        .content ul {
+            padding: 0;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+        .content ul li {
+            margin-bottom: 10px;
+            color: #666;
+            margin-left: 20px;
+        }
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            border: 1px solid rgb(204, 204, 204);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: none;
+            width: 300px;
+        }
+        .dropdown ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .dropdown li {
+            margin-bottom: 5px;
+            white-space: nowrap; /* Prevent line breaks */
+        }
+        .dropdown a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 5px;
+        }
+        .dropdown li:hover {
+            background-color: rgb(240, 240, 240);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+           float: right;
+           margin-top: 150px;
+           margin-right: 100px;
+           margin-left: -200px;
+           height: 200px;
+           border-radius: 100px;
+        }
+        .logo-container h1 {
+            color: bisque;
+            margin: 0 580px;
+        }
+        .div3, .div4, .div5 {
+            font-size: 20px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery img {
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            /* width: 300px; */
+        }
+        .testimonial {
+            border-left: 3px solid #333;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .testimonial blockquote {
+            margin: 0;
+            font-style: italic;
+            color: #666;
+        }
+        .testimonial cite {
+            color: #333;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        footer p {
+            margin: 0;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <center><br>
+            <a href="about us page.html" target="_blank">About Us</a>
+            <div class="banner">
+                <a href="" ng-mouseover="showDropdown = true" ng-mouseleave="showDropdown = false">Events</a>
+                <div class="dropdown" ng-mouseover="showDropdown = true" ng-mouseleave="showDropdown = false" ng-show="showDropdown">
+                    <ul>
+                        <li><a href="birthday_party.html" target="_blank">Birthdays</a></li>
+                        <li><a href="wedding part 2.html" target="_blank">Weddings</a></li>
+                        <li><a href="corporate events.html" target="_blank">Corporate Events</a></li>
+                        <li><a href="custom_party.html" target="_blank">Parties</a></li>
+                        <li><a href="other events.html" target="_blank">Customized Event Celebrations</a></li>
+                    </ul>
+                </div>
+            </div>
+        <a href="gallery.html" target="_blank">Gallery</a>
+        <a href="form.html" target="_blank">Job Application Form</a>
+        <a href="contact.html" target="_blank">Contact Us</a><br><br></center>
+    </div>
+
+    <div class="div2" >
+        <br><br><br><br><br>
+           <div class="logo-container">
+               <div>
+                   <h1><i>Event Bliss</h1>
+                   <h3 style="color:darkgreen; text-align: center; font-size: larger;">Your One-Stop Event Management Solution</i></h3>
+               </div>
+           </div>
+        <br><br><br><br>
+    </div>
+
+    <div class="backdrop"><br>
+    <img src="logo.jpg" alt="Event Bliss Logo" class="logo">
+    <div class="container">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Event Bliss is your premier event management company, dedicated to creating memorable experiences for every occasion. Whether it's a birthday, wedding, corporate event, or any other celebration, we handle all aspects of event planning and coordination with meticulous attention to detail. Our team of experienced professionals works tirelessly to ensure that your event exceeds expectations and leaves a lasting impression on you and your guests.</p>
+            
+            <h2>Events We Organize</h2>
+            <ul>
+                <li>Birthday Parties</li>
+                <li>Weddings</li>
+                <li>Corporate Events</li>
+                <li>Parties</li>
+                <li>Customized Event Celebrations</li>
+            </ul>
+
+            <h2>Our Services</h2>
+            <p>We offer a wide range of services to make your event memorable:</p>
+            <ul>
+                <li>Event Planning and Coordination</li>
+                <li>Venue Selection and Decoration</li>
+                <li>Catering Services</li>
+                <li>Entertainment Arrangements</li>
+                <li>Photography and Videography</li>
+                <li>Transportation and Accommodation</li>
+            </ul>
+        </div>
+    </div>
+        
+    <div class="additional-content">
+        <div class="gallery">
+            <img src="birthday.jpg" alt="Birthday Image" width="200">
+            <img src="wedding1.jpg" alt="Wedding Image" width="200">
+            <img src="corporate event.jpg" alt="Corporate Event Image" width="200">
+            <img src="parties.jpg" alt="Party Image" width="200">
+            <img src="image.jpeg" alt="Other Image" width="200">
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <h2>Testimonials</h2>
+                <div class="testimonial">
+                    <blockquote>
+                        "Event Bliss made our wedding day truly magical. Their attention to detail and professionalism exceeded our expectations. Highly recommended!"
+                    </blockquote>
+                    <cite>- John and Emily</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        "Thank you Event Bliss for organizing the perfect birthday party for our son. It was a day he'll never forget!"
+                    </blockquote>
+                    <cite>- Sarah</cite>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() 
+        {
+            var showDropdown = false;
+            document.querySelector('.banner').addEventListener('mouseover', function() 
+            {
+                showDropdown = true;
+                document.querySelector('.dropdown').style.display = 'block';
+            });
+            document.querySelector('.banner').addEventListener('mouseleave', function()
+            {
+                showDropdown = false;
+                document.querySelector('.dropdown').style.display = 'none';
+            });
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Event Bliss. All rights reserved.</p>
+    </footer>
+
+</div>
+</body>
+</html>
